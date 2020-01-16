@@ -23,9 +23,27 @@ public_key, private_key = paillier.generate_paillier_keypair()
 secret_number_list = [3.141592653, 300, -4.6e-12]
 encrypted_number_list = [public_key.encrypt(x) for x in secret_number_list]
 
-
-encrypted_number_list = 
+# encrypted_number_list
 [<phe.paillier.EncryptedNumber object at 0x000001BB6990AC88>, 
 <phe.paillier.EncryptedNumber object at 0x000001BB6991D630>, 
 <phe.paillier.EncryptedNumber object at 0x000001BB6991D7F0>]
+```
+
+3. 암호화된 상태에서 연산 수행 
+
+```python
+a = encrypted_number_list[0]-3  # 0.141592653
+b = encrypted_number_list[1]+5  # 305
+c = encrypted_number_list[2]*-2 # 9.2e-12
+```
+
+4. 복호화하여 결과 확인
+
+```python
+>>>private_key.decrypt(a)
+0.141592653
+>>>private_key.decrypt(b)
+305
+>>>private_key.decrypt(c)
+9.2e-12
 ```
