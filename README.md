@@ -15,13 +15,13 @@ Homomorphic Encryption in python
 
 ## EXAMPLE
 
-1. 먼저 암호화를 위해 공개 키 쌍과 개인 키 쌍을 생성해야 한다
+1. Create public and private key pairs for encryption first
 
 ```python
 public_key, private_key = paillier.generate_paillier_keypair()
 ```
 
-2. 암호화를 원하는 평문을 넣고 암호화 수행
+2. Perform encryption with the desired plaintext
 
 ```python
 secret_number_list = [3.141592653, 300, -4.6e-12]
@@ -33,7 +33,7 @@ encrypted_number_list = [public_key.encrypt(x) for x in secret_number_list]
 <phe.paillier.EncryptedNumber object at 0x000001BB6991D7F0>]
 ```
 
-3. 암호화된 상태에서 연산 수행 
+3. Perform operations in encrypted state 
 
 ```python
 a = encrypted_number_list[0]-3  # 0.141592653
@@ -41,7 +41,7 @@ b = encrypted_number_list[1]+5  # 305
 c = encrypted_number_list[2]*-2 # 9.2e-12
 ```
 
-4. 복호화하여 결과 확인
+4. Finally decrypt to see the results
 
 ```python
 >>>private_key.decrypt(a)
