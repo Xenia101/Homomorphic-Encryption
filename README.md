@@ -13,6 +13,10 @@ Homomorphic Encryption in python
 평문 m<sub>1</sub>, m<sub>2</sub>에 대한 암호문 c<sub>1</sub>, c<sub>2</sub>가 있을때, m<sub>1</sub>+m<sub>2</sub> 를 계산한다고 한다.
 이때, 일반적인 방법으로는 암호문 c<sub>1</sub>과 c<sub>2</sub>를 복호화 하여 평문 m<sub>1</sub>,m<sub>2</sub>를 얻고 m<sub>1</sub>+m<sub>1</sub>을 계산한 다음 다시 암호화하여 m<sub>1</sub>+m<sub>2</sub>의 결과물을 얻을 수 있다. 하지만 Homomorphic Encryption의 경우 이러한 과정들을 비밀키 없이 계산을 수행할 수 있다. 즉, 복호화의 과정을 거치지않고 계산을 수행할 수 있다.
 
+평문이 10 + 15 = 25 일때, 10과 15를 **암호화**를 진행하게 되면 10 **mod4** = 2, 10 **mod7** = 3 와 15 **mod4** = 3, 15 **mod7** = 1 의 결과가 나오게 된다. mod4를 한 결과와 mod7을 한 결과를 각각 **덧셈 연산**을 수행하게 되면 5와 4가 나온다.
+
+
+
 ## EXAMPLE
 
 1. Create public and private key pairs for encryption first
