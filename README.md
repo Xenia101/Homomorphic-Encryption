@@ -15,7 +15,7 @@ Homomorphic Encryption in python
 
 평문이 **10 + 15 = 25** 일때, 10과 15를 **암호화**를 진행하게 되면 10 mod4 = 2, 10 mod7 = 3 와 15 mod4 = 3, 15 mod7 = 1 의 결과가 나오게 된다. mod4를 한 결과와 mod7을 한 결과를 각각 **덧셈 연산**을 수행하게 되면 5와 4가 나온다. 이를 mod4 와 mod 7을 연산한 **1**과 **4**는 평문을 연산한 25를 mod4과 mod7로 암호화한 결과인 **1**과 **4**로 암호문을 연산한 결과와 평문 자체를 연산한 결과는 동일 하게 나온다.
 
-## EXAMPLE
+## Example
 
 1. Create public and private key pairs for encryption first
 
