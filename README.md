@@ -1,6 +1,6 @@
 # Homomorphic Encryption
 
-Homomorphic Encryption in python
+A Homomorphic Encryption in python
 
 <p align=center>
   <img src="https://github.com/Xenia101/Homomorphic-Encryption/blob/master/img/al.PNG?raw=true">
