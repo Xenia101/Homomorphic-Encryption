@@ -35,7 +35,7 @@ encrypted_number_list = [public_key.encrypt(x) for x in secret_number_list]
 <phe.paillier.EncryptedNumber object at 0x000001BB6991D7F0>]
 ```
 
-3. Perform operations in encrypted state*
+3. Perform operations in encrypted state
 
 ```python
 a = encrypted_number_list[0]-3  # 0.141592653
